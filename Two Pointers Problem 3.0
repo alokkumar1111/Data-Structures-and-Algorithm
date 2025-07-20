@@ -44,3 +44,4 @@ class cl{
         }
     }
 }
+//Move all the even integers at the begining of the array followed by all the odd integers
