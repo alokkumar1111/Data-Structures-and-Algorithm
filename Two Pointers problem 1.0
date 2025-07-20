@@ -39,3 +39,5 @@ class Main {
        printArr(arr);
     }
 }
+//Sort an array consisting of only 0s and 1s in ascending order
+//Basic approach
