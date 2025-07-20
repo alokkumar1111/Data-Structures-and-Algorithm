@@ -44,3 +44,5 @@ class cl{
         }
     }
 }
+//Sort an array consisting of only 0s and 1s in ascending order
+//Optimized approach
