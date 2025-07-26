@@ -1,0 +1,55 @@
+// #include <stdio.h>
+
+// int main() {
+//     int i, j;
+//     int spaces[] = {6, 4, 2, 0};  // custom leading spaces
+//     int rows = 4;
+
+//     // Upper half
+//     for (i = 0; i < rows; i++) {
+//         for (j = 0; j < spaces[i]; j++) printf("-");
+
+//         for (j = 1; j <= i + 1; j++) printf("%d ", j);
+//         for (j = i; j >= 1; j--) printf("%d ", j);
+
+//         printf("-\n");
+//     }
+
+//     // Lower half
+//     for (i = rows - 2; i >= 0; i--) {
+//         for (j = 0; j < spaces[i]; j++) printf("-");
+
+//         for (j = 1; j <= i + 1; j++) printf("%d ", j);
+//         for (j = i; j >= 1; j--) printf("%d ", j);
+
+//         printf("-\n");
+//     }
+
+//     return 0;
+// }
+//Pattern program 1
+
+
+
+
+#include <stdio.h>
+
+int fibonacci(int n) {
+    if (n == 0) return 0;
+    else if (n == 1) return 1;
+    else return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n, i;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Sequence:\n");
+    for (i = 0; i < n; i++) {
+        printf("%d ", fibonacci(i));
+    }
+
+    return 0;
+}  
+//Program to print fibonacci sequence
