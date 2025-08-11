@@ -1,0 +1,95 @@
+class Main{
+    public static void main(String ar[]){
+        
+        //1
+        // int num=1;
+        // for(int l=1; l<=5; l++){
+        //     for(int s=1; s<=l; s++){
+        //         System.out.print(num);
+        //         num=1-num;
+        //     }
+        //     System.out.println();
+        // }
+        
+        
+        
+        
+        //2
+        // for(int l=1; l<=5; l++){
+        //     for(int b=5; b>l; b--){
+        //         System.out.print("-");
+        //     }
+        //     for(int s=1; s<=l; s++){
+        //         System.out.print("*");
+        //     }
+        //     System.out.println();
+        // }
+        
+        
+        //2.1
+        // for(int i=0; i<5; i++){
+        //     for(int b=0; b<=5; b++){
+        //         if(b<5-i){
+        //             System.out.print("-");
+        //         }
+        //         else{
+        //             System.out.print("*");
+        //         }
+        //     }
+        //     System.out.println();
+        // }
+        
+        
+        
+        //3
+        // for(int l=1; l<=5; l++){
+        //     for(int s=1; s<=l; s++){
+        //         if(s==1 || s==l || l==5){
+        //             System.out.print("*");
+        //         }
+        //         else{
+        //             System.out.print("-");
+        //         }
+        //     }
+        //     System.out.println();
+        // }
+        
+        
+        
+        //4
+        //  int n=1212123;
+        //  int n1=n;
+        //  for(int i=0; i<=9; i++){
+        //     n=n1;
+        //     int count=0;
+        //       for(; n!=0; n=n/10){
+        //           if(n%10==i)
+        //               count++;
+        //       }
+        //     if(count>0){
+        //         System.out.println(i+" :"+count);
+        //     }
+        //  }
+        
+        
+        
+        
+        //5
+    //     int value=0;
+    //     for(int i=1; i<=9; i++){
+    //         value=value+i/fact(i);
+    //     }
+    //     System.out.println(value);
+    // }
+    
+    
+    
+    
+    //5
+    // public static int fact(int num){
+    //     if(num==0){
+    //         return 1;
+    //     }
+    //     return num*fact(num-1);
+    // }
+ }
