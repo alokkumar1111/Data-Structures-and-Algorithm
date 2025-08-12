@@ -1,0 +1,65 @@
+class Main{
+    public static void main(String ar[]){
+    //1
+    //     int c=1;
+    //     for(int l=1; l<=5; l++){
+    //         for(int s=1; s<=l; s++){
+    //             System.out.print(c);
+    //             c=1-c;
+    //         }
+    //         System.out.println();
+    //     }
+    // }
+    
+    
+    
+    //2
+    //   int c;
+    //   for(int l=1; l<=5; l++){
+    //       if(l%2!=0){
+    //           c=0;
+    //       }
+    //       else{
+    //           c=1;
+    //       }
+    //       for(int s=1; s<=l; s++){
+    //           System.out.print(c);
+    //           c=1-c;
+    //       }
+    //       System.out.println();
+    //   }
+    
+    
+    
+       //3
+        // for(int l=1; l<=5; l++){
+        //   int c=1;
+        //   for(int b=5; b>=l; b--){
+        //       System.out.print("-");
+        //   }
+        //   for(int s=1; s<=2*l-1; s++){
+        //       System.out.print(c);
+        //       c=1-c;
+        //   }
+        //   System.out.println();
+        // }
+        
+        
+        
+        //4
+        // for(int l=1; l<5; l++){
+        //     for(int b=5; b>=l; b--){
+        //         System.out.print(" ");
+        //     }
+        //     for(int s=1; s<=2*l-1; s++){
+        //         if(s%2!=0){
+        //             System.out.print("*");
+        //         }
+        //         else{
+        //             System.out.print(" ");
+        //         }
+        //     }
+        //     System.out.println();
+        // }
+    }
+}
