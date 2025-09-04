@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+class Main{
+    public static void main(String ar[]){
+        ArrayList<Integer> list=new ArrayList<>();
+        list.add(1);
+        list.add(9);
+        list.add(2);
+        list.addAll(Arrays.asList(12,13,11,17,6,15,19,13,21,3)); //TC: O(1)
+        
+        ArrayList<String> list2=new ArrayList<>();
+        list2.add("Kavita");
+        list2.add("Chandani");
+        list2.add("Nanadini");
+        list2.addAll(Arrays.asList("Tapasya","Amit","Tanya","Akaay","Kajal","Sakshi"));//Tc:O(1)
+        
+        for(int num:list){
+            System.out.print(num+" ");
+        }
+        System.out.println();
+        System.out.println(list);
+        System.out.println(list.get(3)); //TC:O(1)
+        list.remove(4); //TCO(n)
+        System.out.println(list);
+        
+        list.removeAll(Arrays.asList(11, 6, 3));
+        System.out.println(list);
+        
+        System.out.println(list2.get(3));
+        System.out.println(list2);
+        list2.removeAll(Arrays.asList("Akaay","Kavita"));
+        System.out.println(list2);
+        
+        
+        list2.set(1, "Manav"); //TC: O(n)
+        System.out.println(list2);
+        
+        
+        List<Integer> indices = Arrays.asList(0, 3, 4, 7);
+        List<Integer> newValues = Arrays.asList(77, 29, 74, 31);
+        for (int i = 0; i < indices.size(); i++) {
+               list.set(indices.get(i), newValues.get(i));
+        }
+        System.out.println(list);
+        
+        
+        System.out.println(list2.contains("Chandani"));//TC:O(n)
+        
+        list.add(4, 9);//To add any element in a list at any index suppose 4.
+        System.out.println(list);
+    }
+}    
