@@ -46,6 +46,7 @@ class cl {
         int arr1[][] = {{9,8,7,6,5},{4,3,2,1,0}};
         int arr2[][] = {{1,2,3},{4,5,6}};  // 2x3
         int arr3[][] = {{1},{2},{3}};       // 3x1
+        int arr4[][] = {{1,2,3}};       //1x3
         
         System.out.println("4x4 Matrix:");
         printSpiral(arr);
@@ -58,6 +59,9 @@ class cl {
         
         System.out.println("3x1 Matrix:");
         printSpiral(arr3);
+        
+        System.out.println("1x3 Matrix:");
+        printSpiral(arr4);
     }
     
     public static void printSpiral(int matrix[][]) {
