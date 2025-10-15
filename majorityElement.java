@@ -26,33 +26,61 @@
 
 
 
-import java.util.Arrays;
+// import java.util.Arrays;
+// class majorityElement{
+//   public static int majorityElement(int[] arr){
+//     if(arr.length==1){
+//       return arr[0];
+//     }
+//     Arrays.sort(arr);
+//     int n=arr.length;
+//     int freq=1;
+//     int ans=arr[0];
+//     for(int i=1; i<arr.length; i++){
+//       if(arr[i]==arr[i-1]){
+//         freq++;
+//       }else{
+//         freq=1;
+//         ans=arr[i];
+//       }
+//       if(freq>arr.length/2){
+//         return arr[i];
+//       }
+//     }
+//     return -1;
+//   }
+//   public static void main(String ar[]){
+//     int[] arr={2, 2, 1, 1, 1, 1, 2, 2, 2};
+//     System.out.println("Majority element: "+majorityElement(arr));
+//   }
+// }
+//Optimal approach
+//TC:O(n log n)+O(n)=O(n log n)
+
+
+
+
+
+
 class majorityElement{
-  public static int majorityElement(int[] arr){
-    if(arr.length==1){
-      return arr[0];
-    }
-    Arrays.sort(arr);
-    int n=arr.length;
-    int freq=1;
-    int ans=arr[0];
-    for(int i=1; i<arr.length; i++){
-      if(arr[i]==arr[i-1]){
-        freq++;
-      }else{
-        freq=1;
+  public static int mooreVotingAlgorithm(int[] arr){
+    int freq=0;
+    int ans=0;
+    for(int i=0; i<arr.length; i++){
+      if(freq==0){
         ans=arr[i];
       }
-      if(freq>arr.length/2){
-         return arr[i];
+      if(ans==arr[i]){
+        freq++;
+      }else{
+        freq--;
       }
-    }
-    return -1;
+    }return ans;
   }
   public static void main(String ar[]){
     int[] arr={2, 2, 1, 1, 1, 1, 2, 2, 2};
-    System.out.println("Majority element: "+majorityElement(arr));
+    System.out.println("Majority Elemnt: "+mooreVotingAlgorithm(arr));
   }
 }
-//Optimal approach
-//TC:O(n log n)+O(n)=O(n log n)
+//Moore Voting mooreVotingAlgorithm
+//TC: O(n)
