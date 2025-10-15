@@ -37,3 +37,4 @@ class rotateByOne{
       System.out.print(rotated2[i]+" ");
     }
   }
+}
