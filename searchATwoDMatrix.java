@@ -107,9 +107,6 @@ class Main{
         eRow--;
         sCol++;
         eCol--;
-        
-        
-        
         // // Bottom row (right to left) - if rows remain
         //     if(sRow <= eRow){
         //         for(int i = eCol; i >= sCol; i--){
