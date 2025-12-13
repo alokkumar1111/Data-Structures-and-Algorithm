@@ -110,6 +110,6 @@ class rotateByD{
     leftRotateByD(arr, 3);
   }
 }
-//Oprimal solution(Reversal Approach)
+//Optimal solution(Reversal Approach)
 //TC: O(n)
 //SC: O(1)
