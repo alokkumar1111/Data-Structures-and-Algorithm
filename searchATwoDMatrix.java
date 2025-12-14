@@ -70,6 +70,35 @@
 
 
 
+****
+class Main{
+    public static int[] searchA2DMatrix(int[][] nums, int target){
+       int m=nums.length;
+       int n=nums[0].length;
+       
+       int low=0;
+       int high=m*n-1;
+       while(low<=high){
+         int mid=low+(high-low)/2;
+         int row=mid/n;
+         int col=mid%n;
+         if(nums[row][col]==target){
+           return new int[] {row,col};
+         }else if(nums[row][col]<target){
+           low=mid+1;
+         }else{
+           high=mid-1;
+         }
+       }return new int[]{-1,-1};
+    }
+  public static void main(String ar[]){
+      int[][] nums={{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}};
+      int[] ans=searchA2DMatrix(nums, 10);
+      System.out.println("Search a 2D Matrix: "+ans[0]+","+ans[1]);
+    }
+}
+//Leetcode
+******
 
 
 
