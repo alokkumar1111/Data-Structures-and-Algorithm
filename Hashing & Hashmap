@@ -1,0 +1,62 @@
+import java.util.HashSet;
+import java.util.Iterator;
+class Hashing{
+  public static void main(String ar[]){
+    
+    System.out.println("Hashing & HashSet!!");
+    HashSet<Integer> set=new HashSet<>();
+    //ArrayList<Integer> list=new ArrayList<>();
+    
+    set.add(1);
+    set.add(2);
+    set.add(3);
+    set.add(4);
+    set.add(5);
+    set.add(7);
+    set.add(8);
+    set.add(9);
+    set.add(11);
+    set.add(13);
+    
+    
+    System.out.println("Duplicate elements will not be added in the set");
+    System.out.println("Size of set is: "+set.size());
+    // System.out.println("Size of set is: "+list.size());
+    
+    
+    System.out.println(set);
+    
+    
+    if(set.contains(1)){
+      System.out.println("Set contains 1");
+    }else{
+      System.out.println("Doesn't contain 1");
+    }
+    if(set.contains(7)){
+      System.out.println("Set contains 7");
+    }else{
+      System.out.println("Doesn't contain 7");
+    }
+    
+    
+    
+    set.remove(7);
+    if(!set.contains(7)){
+      System.out.println("7 deleted");
+    }
+    
+    System.out.println("Now the size of Hashset is: "+set.size());
+    System.out.println(set);
+    
+    
+    
+    
+    Iterator it=set.iterator();
+    while(it.hasNext()){
+      System.out.print(it.next()+" ");
+    }
+    //In Java, a HashSet does NOT maintain insertion order, does NOT sort elements, the order of elements in output is unpredictable. This is because HashSet is internally backed by a hash table, and elements are placed based on their hash values, not their insertion sequence. Running the program multiple times or on different systems may even give different orders.
+    
+    
+  }
+}
