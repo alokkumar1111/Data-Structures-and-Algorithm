@@ -1,0 +1,73 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+class Hashing{
+  public static void main(String ar[]){
+    HashMap<String, String> map=new HashMap<>();
+    
+    
+    map.put("India", "New Delhi");
+    map.put("US", "Washington DC");
+    map.put("Japan","Tokyo");
+    map.put("South Korea","Seoul");
+    map.put("China", "Beijing");
+    map.put("Sri Lanka", "Sri Jayawardenepura Kotte");
+    map.put("Vietnam","Hanoi");
+    map.put("Brazil","Brasilia");
+    map.put("South Africa","Cape Town");
+    map.put("Chile","Santiago");
+    
+    System.out.println(map);
+    map.put("South Africa","South Hampton");
+    map.put("Argentina","Rio-De-Janerio");
+    map.put("Russia","Moscow");
+    System.out.println(map);
+    
+    
+    if(map.containsKey("Russia")){
+      System.out.println("Key is present in the map (Russia)");
+    }else{
+      System.out.println("Key is not present in the map (Russia)");
+    }
+    
+    if(map.containsKey("Indonesia")){
+      System.out.println("Key is present in the map (Indonesia)");
+    }else{
+      System.out.println("Key is not present in the map (Indonesia)");
+    }
+    
+    System.out.println(map.get("Russia"));
+    System.out.println(map.get("Indonesia"));
+    
+    
+    map.put("Egypt","Cairo");
+    map.put("NewZeland","Wellington");
+    map.put("Japan","Tokyo");
+    map.put("Madagascar","Antananarivo");
+    
+    
+    
+    System.out.println();
+    //iteration in HashMap
+    for(Map.Entry<String, String>e:map.entrySet()){
+      System.out.print(e.getKey()+": ");
+      System.out.println(e.getValue());
+    }
+    System.out.println("Size of Hashmap: "+map.size());
+    
+    
+    
+    
+    System.out.println();
+    Set<String> keys=map.keySet();
+    for(String key:keys){
+      System.out.println(key+": "+map.get(key));
+    }
+    
+    
+    System.out.println();
+    map.remove("Russia");
+    System.out.println(map);
+    System.out.println("Current size of Hashmap after deletion: "+map.size());
+  }
+}
