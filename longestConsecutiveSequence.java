@@ -52,6 +52,7 @@ class cl{
       longest=Math.max(longest, count);
     }else{
       count=1;
+      curr=nums[i];
     }
   }return longest;
  }
