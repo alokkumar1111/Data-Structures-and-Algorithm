@@ -33,33 +33,72 @@
 
 
 
+// import java.util.Arrays;
+// class Main{
+//     public static int longestConsecutiveSequence(int[] nums){
+//         if(nums.length==0){
+//             return 0;
+//         }
+//         Arrays.sort(nums); //O(n log n)
+
+//         int count=1;
+//         int longest=1;
+//         for(int i=1; i<nums.length; i++){ //O(n)
+//             if(nums[i]==nums[i-1]){
+//                 continue;
+//             }
+//             else if(nums[i]==nums[i-1]+1){
+//                 count++;
+//                 longest=Math.max(count, longest);
+//             }else{
+//                 count=1;
+           
+//             }
+//         }return longest;
+//     }
+//     public static void main(String ar[]){
+//          int[] nums={100, 102, 103, 4, 104, 5, 3, 2, 1, 6};
+//          System.out.println("Logest Consecutive Sequence: "+longestConsecutiveSequence(nums));
+//     }
+// }
+//O(n log n) TC
 
 
-import java.util.Arrays;
-class cl{
- public static int longestConsecutiveSequenceBetter(int[] nums){
-  if(nums.length==0){
-    return 0;
-  }
-  int longest=1;
-  int count=1;
-  Arrays.sort(nums);
-   int curr=nums[0];
-  for(int i=1; i<nums.length; i++){
-    if((curr+1)==nums[i]){
-      count++;
-      curr++;
-      longest=Math.max(longest, count);
-    }else{
-      count=1;
-      curr=nums[i];
+
+
+
+
+
+import java.util.HashSet;
+import java.util.Set;
+class longestConsecutiveSequence{
+ public static int longestConsecutiveOptimal(int[] nums) {
+    Set<Integer> set = new HashSet<>();
+
+    for (int x : nums) {
+        set.add(x);
     }
-  }return longest;
+
+    int longest = 0;
+
+    for (int x : set) {
+        // check if x is the start of a sequence
+        if (!set.contains(x - 1)) {
+            int curr = x;
+            int count = 1;
+
+            while (set.contains(curr + 1)) {
+                curr++;
+                count++;
+            }
+            longest = Math.max(longest, count);
+        }
+    }
+    return longest;
  }
  public static void main(String ar[]){
-    int[] nums={100, 102, 103, 4, 104, 5, 2, 3, 1, 6};
-    System.out.println("Longest Consecutive Sequence: "+longestConsecutiveSequenceBetter(nums));
-  }
+    int[] nums={101, 102, 103, 4, 104, 5, 3, 2, 1, 6};
+    System.out.println("Longest Consecutive Sequence: "+longestConsecutiveOptimal(nums));
+ }
 }
-//Better approach
-//TC: O(n)
+//O(n) TC
